@@ -1,0 +1,82 @@
+body {
+  background-color: green;
+  color: #fff;
+}
+
+#logo {
+  text-decoration: underline;
+  font-style: italic;
+  color: yellow;
+  margin-bottom: 0px;
+
+}
+
+#logo a {
+  color: yellow;
+}
+
+#masthead {
+  padding-left: 20px;
+  border-bottom: 1px solid yellow;
+  color: yellow;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+#contents {
+  color: yellow;
+}
+
+.blog-post-text {
+  border: 1px solid #00ff55;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.comments-divider {
+  border-top: 1px solid white;
+}
+
+a {
+  color: #0ff;
+}
+
+a:visited {
+  color: #0bb;
+}
+
+h3#page-title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  font-size: 24px;
+  color: #ffaaaa;
+}
+
+.sidebar {
+  width: 140px;
+  height: 100%;
+  margin-right: 40px;
+  padding-left: 20px;
+  float: left;
+  border: 1px solid yellow; 
+}
+
+.content {
+  float: left;
+  width: 80%;
+}
+
+#gutter {
+  float: right;
+}
+
+#clock {
+float: right;
+}
+
+#thewhole {
+  height:1000px;
+}

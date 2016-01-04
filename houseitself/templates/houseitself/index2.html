@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+{% load staticfiles %}
+<body background= "{% static 'houseitself/Academy.png' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'houseitself/style.css' %}" />
+
+  {% for doll in dolls %}
+       <img src="{% static doll.image %}" height="400px" width="200px">
+  {% endfor %}
+
+
+<div>ADD DOLL?
+<form method="POST" action="{% url 'add_doll' %}">
+ 		{% csrf_token %}
+ 		Name: <input type = "text" name="name" size="25">
+ 		Image: <input type="text" name="image" size="25">
+ 		Location: <input type="text" name="doll" size="25">
+ 		<input type="submit" value="Submit">
+ 	</form>
+ </div>
+ <div>SHOW DOLL?
+ 	<form method="GET" action="{% url 'showdolly' %}">
+ 		{% csrf_token %}
+ 		doll ID: <input type = "text" name="ID" size="25">
+ 		<input type="submit" value="Submit">
+ 	</form>
+
+
+ </div>
+
+</body>
+</html>
