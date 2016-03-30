@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>`````````````````DOLLHOUSE`````````````````
+		{% load staticfiles %}
+		<title>draggable / droppable dollhouse interface test</title>
+		<link rel="stylesheet" href="{% static 'dollhouse.css' %}" type="text/css">
+		<script type="text/javascript" src="{% static 'dollhouse.js' %}"></script>
+		<script src="https://coe.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+
+			 {% for doll in dolls %}
+			 	<div class="inventory_slot" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="{{ doll }}" src="{% static doll.image %}" alt="dragit" width="200px" draggable="true" ondragstart="drag(event)"></div>
+  			{% endfor %}
+    		
+		</div>
+		<div class="container" style="height:1200px; margin-top: 100px;">
+    		<div class="stage" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+
+	</body>
+</html>

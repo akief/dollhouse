@@ -22,6 +22,10 @@ def show_one_doll(request, doll_id):
                   'doll': doll_id,
                   })
 
+def dragdrop(request):
+    dolls = models.Doll.objects.all()
+    return render(request,'houseitself/dragndrop.html', {'dolls':dolls})
+
 #def showdoll(request):
 #    doll_id = int(request.GET["ID"])
 #    d = get_object_or_404(Doll, pk=doll_id)
